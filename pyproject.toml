@@ -36,9 +36,9 @@ dev = [
 prompt-injection-scan = "prompt_injection_core.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/tuusuario/prompt-injection-core"
-Repository = "https://github.com/tuusuario/prompt-injection-core"
-Documentation = "https://github.com/tuusuario/prompt-injection-core#readme"
+Homepage = "https://github.com/JuanBaquero99/prompt-injection-core"
+Repository = "https://github.com/JuanBaquero99/prompt-injection-core"
+Documentation = "https://github.com/JuanBaquero99/prompt-injection-core#readme"
 
 [tool.setuptools.packages.find]
 where = ["."]
