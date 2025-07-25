@@ -6,16 +6,16 @@ __version__ = "0.1.0"
 __author__ = "Juan Pablo Baquero"
 __email__ = "baquerojuan99@gmail.com"
 
-# Import main classes when they are ready:
-# from .core import PromptScanner, ScanResult
-# from .detectors.jailbreak import JailbreakDetector
-# from .detectors.leak import SystemLeakDetector
+# Import main classes
+from .core import PromptScanner, ScanResult
+from .detectors import Detection, Detector
+from .detectors.jailbreak import JailbreakDetector
 
 __all__ = [
-    # Uncomment when classes are implemented:
-    # "PromptScanner",      # Main scanner class
-    # "ScanResult",         # Scan result data class
-    # "JailbreakDetector",  # Jailbreak detection
-    # "SystemLeakDetector", # System prompt leak detection
+    "PromptScanner",      # Main scanner class
+    "ScanResult",         # Scan result data class
+    "Detection",          # Individual detection result
+    "Detector",           # Base detector class
+    "JailbreakDetector",  # Jailbreak detection
 ]
 
