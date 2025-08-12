@@ -115,6 +115,32 @@ python test_quick.py     # Test JailbreakDetector
 - [ ] Machine learning detection
 - [ ] Plugin system para detectores custom
 
+# Filosofía y Contexto
+
+Este proyecto forma parte de una suite de herramientas para la seguridad en sistemas de IA, alineado con marcos como MITRE ATLAS y OWASP AI Security. Actualmente, se enfoca en la Fase 1: Entrada y manipulación de datos, abordando amenazas que ocurren antes o durante el procesamiento de la entrada al modelo.
+
+## Objetivo
+
+- Detectar y reportar vulnerabilidades de Prompt Injection en modelos de lenguaje.
+- Generar ataques de Prompt Injection con fines éticos y de pruebas.
+- Servir como base para futuras fases de seguridad en IA.
+
+## Relación con MITRE ATLAS y OWASP AI Security
+
+- **MITRE ATLAS**: El proyecto se alinea con las técnicas de manipulación de entrada y evasión de controles descritas en ATLAS.
+- **OWASP AI Security**: Se enfoca en la primera fase del ciclo de vida de amenazas, cubriendo la manipulación de datos de entrada y la validación insuficiente.
+
+## Funcionalidades actuales
+
+- Detección de vulnerabilidades de Prompt Injection.
+- Generación de ataques de Prompt Injection para pruebas éticas.
+
+## Próximos pasos
+
+- Ampliar la cobertura de detección y ataque.
+- Generar reportes alineados con estándares de la industria.
+- Integrar con pipelines de CI/CD y otras fases de seguridad IA.
+
 ## Feedback Bienvenido
 
 Este es un proyecto experimental. Si tienes ideas, casos de uso, o quieres contribuir:

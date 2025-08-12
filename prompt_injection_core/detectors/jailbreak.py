@@ -1,13 +1,13 @@
-import re 
+
+import re
 from typing import List
-from . import Detector, Detection
+from .base import Detector
+from .models import Detection
 
 class JailbreakDetector(Detector):
-    """Detects jailbreak attempts in prompts"""
-    
+    """Detecta intentos de jailbreak en prompts"""
     def __init__(self):
         super().__init__()
-        # Common jailbreak patterns
         self.patterns = [
             r"ignore\s+(?:all\s+)?(?:previous\s+)?instructions",
             r"forget\s+(?:all\s+)?(?:previous\s+)?instructions",
@@ -16,17 +16,14 @@ class JailbreakDetector(Detector):
             r"pretend\s+(?:that\s+)?you\s+are",
             r"act\s+(?:as|like)\s+(?:if\s+)?you\s+are",
         ]
-    
+
     def detect(self, prompt: str) -> List[Detection]:
         detections = []
-        
-        # Check for common jailbreak patterns
         for pattern in self.patterns:
             if re.search(pattern, prompt, re.IGNORECASE):
-                # Found a match!
-                detection = Detection(
+                detections.append(Detection(
                     vulnerability_type="Jailbreak Attempt",
-                    confidence=0.9,  # High confidence for known patterns
+                    confidence=0.9,
                     severity="HIGH",
                     description=f"Detected a potential jailbreak attempt using pattern: {pattern}",
                     evidence=pattern,
@@ -34,7 +31,5 @@ class JailbreakDetector(Detector):
                         "Review the prompt for security vulnerabilities.",
                         "Implement input validation to prevent such attempts."
                     ]
-                )
-                detections.append(detection)
-        
+                ))
         return detections

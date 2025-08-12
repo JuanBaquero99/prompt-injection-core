@@ -4,12 +4,13 @@ Test the complete PromptScanner functionality
 """
 
 # Add the project to Python path
+# Add the project to Python path
 import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
 
-# Import using the package structure
-from prompt_injection_core.core import PromptScanner, ScanResult
+# Import desde la nueva estructura
+from prompt_injection_core.scanner.scanner import PromptScanner, ScanResult
 
 def test_prompt_scanner():
     """Test the complete PromptScanner with various scenarios"""

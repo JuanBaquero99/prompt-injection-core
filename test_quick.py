@@ -6,9 +6,9 @@ Quick test to verify our JailbreakDetector works
 # Add the project to Python path
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'prompt_injection_core'))
+sys.path.insert(0, os.path.dirname(__file__))
 
-from detectors.jailbreak import JailbreakDetector
+from prompt_injection_core.detectors.jailbreak import JailbreakDetector
 
 def test_jailbreak_detector():
     """Test the JailbreakDetector with various prompts"""

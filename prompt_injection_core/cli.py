@@ -7,7 +7,7 @@ import argparse
 import sys
 import json
 from typing import List
-from .core import PromptScanner
+from .scanner.scanner import PromptScanner
 
 
 def format_text_output(result, verbose: bool = False) -> str:
