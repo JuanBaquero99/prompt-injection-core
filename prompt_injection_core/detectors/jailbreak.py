@@ -1,3 +1,30 @@
+"""
+Module: jailbreak.py
+---------------------
+
+This module defines the `JailbreakDetector` class, which specializes in detecting
+prompt injection attempts that aim to bypass model restrictions, known as "jailbreaks."
+
+A jailbreak attempt is typically an instruction designed to override, ignore, or replace
+the model's existing system prompt or rules, enabling unauthorized or unsafe behavior.
+
+Classes:
+- JailbreakDetector: Inherits from `Detector` and implements detection logic
+  using predefined regular expression patterns.
+
+Detection process:
+1. The detector scans the given prompt against a set of known jailbreak patterns.
+2. If a match is found, a `Detection` object is created with:
+   - Vulnerability type ("Jailbreak Attempt").
+   - High confidence score (0.9).
+   - Severity marked as "HIGH".
+   - Description including the matched pattern.
+   - Recommendations for mitigation.
+
+Usage:
+- Instantiate `JailbreakDetector` and call `.detect(prompt)` to receive a list of
+  `Detection` objects for any suspicious jailbreak attempts found in the text.
+"""
 
 import re
 from typing import List

@@ -1,3 +1,4 @@
+# This file has been moved to docs/filosofia.md
 # Filosofía del Proyecto: prompt-injection-core
 
 ## Contexto

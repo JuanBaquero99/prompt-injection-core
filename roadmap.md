@@ -1,3 +1,4 @@
+# This file has been moved to docs/roadmap.md
 Issues/Tareas Específicas
 
 1. Implementar SystemLeakDetector (2-3 días)

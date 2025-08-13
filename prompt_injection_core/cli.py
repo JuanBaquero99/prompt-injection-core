@@ -91,18 +91,17 @@ def format_json_output(result) -> str:
     return json.dumps(output, indent=2, ensure_ascii=False)
 
 
-def scan_single_prompt(prompt: str, format_type: str, verbose: bool) -> None:
+def scan_single_prompt(prompt: str, format_type: str, verbose: bool, enabled_detectors=None, confidence_threshold=0.0) -> None:
     """Scan a single prompt and display results"""
-    scanner = PromptScanner()
+    scanner = PromptScanner(enabled_detectors=enabled_detectors, confidence_threshold=confidence_threshold)
     result = scanner.scan(prompt)
-    
     if format_type == "json":
         print(format_json_output(result))
     else:
         print(format_text_output(result, verbose))
 
 
-def scan_file(file_path: str, format_type: str, verbose: bool) -> None:
+def scan_file(file_path: str, format_type: str, verbose: bool, enabled_detectors=None, confidence_threshold=0.0) -> None:
     """Scan prompts from a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -118,7 +117,7 @@ def scan_file(file_path: str, format_type: str, verbose: bool) -> None:
         print("❌ Error: No prompts found in file")
         sys.exit(1)
     
-    scanner = PromptScanner()
+    scanner = PromptScanner(enabled_detectors=enabled_detectors, confidence_threshold=confidence_threshold)
     
     if format_type == "json":
         # JSON format for multiple prompts
@@ -233,6 +232,17 @@ Examples:
         version="prompt-injection-core 0.1.0"
     )
     
+    parser.add_argument(
+        "--detectors",
+        type=str,
+        help="Nombres de detectores a activar, separados por coma (ej: JailbreakDetector,RolePlayDetector)"
+    )
+    parser.add_argument(
+        "--confidence-threshold",
+        type=float,
+        default=0.0,
+        help="Confianza mínima (0.0-1.0) para reportar una detección (default: 0.0)"
+    )
     args = parser.parse_args()
     
     # Validate arguments
@@ -242,11 +252,16 @@ Examples:
     if args.prompt and args.file:
         parser.error("Cannot use both prompt and --file options")
     
+    # Procesar detectores
+    enabled_detectors = None
+    if args.detectors:
+        enabled_detectors = [d.strip() for d in args.detectors.split(",") if d.strip()]
+
     try:
         if args.file:
-            scan_file(args.file, args.format, args.verbose)
+            scan_file(args.file, args.format, args.verbose, enabled_detectors, args.confidence_threshold)
         else:
-            scan_single_prompt(args.prompt, args.format, args.verbose)
+            scan_single_prompt(args.prompt, args.format, args.verbose, enabled_detectors, args.confidence_threshold)
     
     except KeyboardInterrupt:
         print("\n⚠️  Scan interrupted by user")

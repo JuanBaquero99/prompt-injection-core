@@ -142,3 +142,7 @@ dmypy.json
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Datos locales y procesados
+/data/
+!data/README.md

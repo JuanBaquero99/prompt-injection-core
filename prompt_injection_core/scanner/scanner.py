@@ -4,6 +4,7 @@ from prompt_injection_core.detectors.models import Detection
 
 from prompt_injection_core.detectors.jailbreak import JailbreakDetector
 from prompt_injection_core.detectors.leak import SystemLeakDetector
+from prompt_injection_core.detectors.roleplay import RolePlayDetector
 
 @dataclass
 class ScanResult:
@@ -14,19 +15,30 @@ class ScanResult:
     vulnerabilities_found: int
     summary: str
 
+
 class PromptScanner:
     """Escáner principal que ejecuta todos los detectores"""
-    def __init__(self):
-        self.detectors: List = [
+    def __init__(self, enabled_detectors=None, confidence_threshold=0.0):
+        all_detectors = [
             JailbreakDetector(),
             SystemLeakDetector(),
+            RolePlayDetector(),
+            # Agrega aquí otros detectores si los tienes
         ]
+        if enabled_detectors is not None:
+            self.detectors = [d for d in all_detectors if d.__class__.__name__ in enabled_detectors]
+        else:
+            self.detectors = all_detectors
+        self.confidence_threshold = confidence_threshold
+
 
     def scan(self, prompt: str) -> ScanResult:
         all_detections = []
         for detector in self.detectors:
             try:
                 detections = detector.detect(prompt)
+                # Filtrar por confianza mínima
+                detections = [d for d in detections if d.confidence >= self.confidence_threshold]
                 all_detections.extend(detections)
             except Exception as e:
                 print(f"Error en el detector {detector.name}: {e}")
