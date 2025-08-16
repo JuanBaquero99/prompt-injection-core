@@ -44,26 +44,51 @@ class RolePlayDetector(Detector):
     def __init__(self):
         super().__init__()
         self.patterns = [
-            r"act\s+as\s+(?:an?|the)?\s*\w+",           # act as a hacker
-            r"pretend\s+to\s+be\s+(?:an?|the)?\s*\w+",  # pretend to be a developer
-            r"you\s+are\s+now\s+(?:an?|the)?\s*\w+",    # you are now a system admin
-            r"from\s+now\s+on,\s*you\s+are\s+(?:an?|the)?\s*\w+", # from now on, you are a...
-            r"assume\s+the\s+role\s+of\s+(?:an?|the)?\s*\w+",     # assume the role of a...
+            r"act\s+as\s+(?:an?|the)?\s*(hacker|admin|developer|doctor|teacher|bot|assistant)",
+            r"pretend\s+to\s+be\s+(?:an?|the)?\s*(hacker|admin|developer|doctor|teacher|bot|assistant)",
+            r"you\s+are\s+now\s+(?:an?|the)?\s*(hacker|admin|developer|doctor|teacher|bot|assistant)",
+            r"from\s+now\s+on,\s*you\s+are\s+(?:an?|the)?\s*(hacker|admin|developer|doctor|teacher|bot|assistant)",
+            r"assume\s+the\s+role\s+of\s+(?:an?|the)?\s*(hacker|admin|developer|doctor|teacher|bot|assistant)",
+            r"impersonate\s+(?:an?|the)?\s*(hacker|admin|developer|doctor|teacher|bot|assistant)",
+        ]
+        self.ignore_patterns = [
+            r"i am a chatbot",
+            r"i am an assistant",
+            r"i am a bot",
+            r"i am an ai",
+            r"what is the weather",
         ]
 
     def detect(self, prompt: str) -> List[Detection]:
+        # Ignorar patrones benignos
+        for ignore_pattern in self.ignore_patterns:
+            if re.search(ignore_pattern, prompt, re.IGNORECASE):
+                return []
         detections = []
         for pattern in self.patterns:
-            if re.search(pattern, prompt, re.IGNORECASE):
+            match = re.search(pattern, prompt, re.IGNORECASE)
+            if match:
+                rol = match.group(1).lower() if match.lastindex else ""
+                # Severidad y confianza según el rol
+                if rol in ["hacker", "admin", "developer"]:
+                    severity = "HIGH"
+                    confidence = 0.95
+                elif rol in ["doctor", "teacher", "bot", "assistant"]:
+                    severity = "MEDIUM"
+                    confidence = 0.8
+                else:
+                    severity = "LOW"
+                    confidence = 0.6
                 detections.append(Detection(
                     vulnerability_type="Role Manipulation",
-                    confidence=0.8,
-                    severity="MEDIUM",
-                    description=f"Possible role manipulation detected with pattern: {pattern}",
+                    confidence=confidence,
+                    severity=severity,
+                    description=f"Role manipulation attempt detected for role: {rol}",
                     evidence=pattern,
                     recommendations=[
                         "Revisar prompts que intentan cambiar el rol del modelo.",
                         "Implementar validación y separación estricta entre instrucciones del sistema y del usuario."
-                    ]
+                    ],
+                    detector=self
                 ))
         return detections

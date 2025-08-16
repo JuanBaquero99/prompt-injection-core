@@ -14,12 +14,17 @@ Public elements:
 
 from .base import Detector
 from .models import Detection
+
 from .jailbreak import JailbreakDetector
 from .leak import SystemLeakDetector
+from .ml_detector import MLDetector
+from .roleplay import RolePlayDetector
 
 __all__ = [
     "Detector",
     "Detection",
     "JailbreakDetector",
     "SystemLeakDetector",
+    "MLDetector",
+    "RolePlayDetector",
 ]

@@ -1,29 +1,39 @@
+"""
+scanner.py
+----------
+Main scanner module for running all prompt injection detectors.
+Provides unified scanning, risk scoring, and summary generation for prompts.
+"""
+
 from typing import List
 from dataclasses import dataclass
 from prompt_injection_core.detectors.models import Detection
-
 from prompt_injection_core.detectors.jailbreak import JailbreakDetector
 from prompt_injection_core.detectors.leak import SystemLeakDetector
 from prompt_injection_core.detectors.roleplay import RolePlayDetector
 
 @dataclass
 class ScanResult:
-    """Resultado global del escaneo"""
+    """
+    Global scan result for a prompt, including detections, risk score, and summary.
+    """
     prompt: str
     detections: List[Detection]
     risk_score: int
     vulnerabilities_found: int
     summary: str
 
-
 class PromptScanner:
-    """Escáner principal que ejecuta todos los detectores"""
+    """
+    Main scanner that runs all enabled detectors on a prompt.
+    """
     def __init__(self, enabled_detectors=None, confidence_threshold=0.0):
+        from prompt_injection_core.detectors.ml_detector import MLDetector
         all_detectors = [
             JailbreakDetector(),
             SystemLeakDetector(),
             RolePlayDetector(),
-            # Agrega aquí otros detectores si los tienes
+            MLDetector(),  # ML detector with default threshold 0.7
         ]
         if enabled_detectors is not None:
             self.detectors = [d for d in all_detectors if d.__class__.__name__ in enabled_detectors]
@@ -31,17 +41,19 @@ class PromptScanner:
             self.detectors = all_detectors
         self.confidence_threshold = confidence_threshold
 
-
     def scan(self, prompt: str) -> ScanResult:
+        """
+        Run all detectors on the given prompt and return a ScanResult.
+        Filters detections by minimum confidence threshold.
+        """
         all_detections = []
         for detector in self.detectors:
             try:
                 detections = detector.detect(prompt)
-                # Filtrar por confianza mínima
                 detections = [d for d in detections if d.confidence >= self.confidence_threshold]
                 all_detections.extend(detections)
             except Exception as e:
-                print(f"Error en el detector {detector.name}: {e}")
+                print(f"Error in detector {detector.name}: {e}")
         risk_score = self._calculate_risk_score(all_detections)
         summary = self._generate_summary(all_detections, risk_score)
         return ScanResult(
@@ -53,6 +65,9 @@ class PromptScanner:
         )
 
     def _calculate_risk_score(self, detections: List[Detection]) -> int:
+        """
+        Calculate a global risk score based on all detections.
+        """
         if not detections:
             return 0
         total_score = 0

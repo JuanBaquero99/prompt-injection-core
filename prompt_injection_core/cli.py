@@ -3,11 +3,18 @@
 Command Line Interface for Prompt Injection Core
 """
 
+
 import argparse
 import sys
 import json
 from typing import List
 from .scanner.scanner import PromptScanner
+
+# Forzar UTF-8 en la salida estándar para evitar errores con emojis en Windows
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+except Exception:
+    pass
 
 
 def format_text_output(result, verbose: bool = False) -> str:

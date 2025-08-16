@@ -1,11 +1,10 @@
 """
-Script para procesar, normalizar y unificar datasets de prompt injection.
-
-Flujo:
-1️⃣ Recolección: Lee archivos de data/raw/ y datasets de Hugging Face
-2️⃣ Normalización: Unifica formato en un DataFrame
-3️⃣ Limpieza y etiquetado: Elimina duplicados, corrige errores, balancea clases
-4️⃣ Exporta dataset final a data/dataset_final.csv
+dataset_process.py
+------------------
+Processes, normalizes, and unifies prompt injection datasets from Hugging Face and local files.
+Removes duplicates, balances classes, and exports a final CSV for model training.
+Output columns: ['prompt', 'label', 'type', 'source', 'lang']
+Dependencies: pandas, datasets, scikit-learn
 """
 
 import os
@@ -17,9 +16,6 @@ RAW_DIR = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw')
 FINAL_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'dataset_final.csv')
 
 
-# 1️⃣ Recolección
-print("Descargando datasets públicos...")
-
 ds_deepset = load_dataset("deepset/prompt-injections")
 df_deepset = ds_deepset["train"].to_pandas()
 
@@ -30,17 +26,26 @@ ds_yanis = load_dataset("yanismiraoui/prompt_injections")
 df_yanis = ds_yanis["train"].to_pandas()
 
 # Nuevo dataset recomendado
-print("Descargando qualifire/prompt-injections-benchmark (requiere login en Hugging Face)...")
+print("Downloading public datasets...")
+ds_deepset = load_dataset("deepset/prompt-injections")
+df_deepset = ds_deepset["train"].to_pandas()
+
+ds_xtram = load_dataset("xTRam1/safe-guard-prompt-injection")
+df_xtram = ds_xtram["train"].to_pandas()
+
+ds_yanis = load_dataset("yanismiraoui/prompt_injections")
+df_yanis = ds_yanis["train"].to_pandas()
+
+print("Downloading qualifire/prompt-injections-benchmark (requires Hugging Face login)...")
 try:
     ds_qualifire = load_dataset("qualifire/prompt-injections-benchmark")
     df_qualifire = ds_qualifire["train"].to_pandas()
 except Exception as e:
-    print(f"No se pudo descargar qualifire/prompt-injections-benchmark: {e}")
+    print(f"Could not download qualifire/prompt-injections-benchmark: {e}")
     df_qualifire = pd.DataFrame(columns=["prompt", "label", "type", "source", "lang"])
 
 
-# 2️⃣ Normalización
-print("Normalizando formato...")
+print("Normalizing format...")
 
 def normalize_deepset(df):
     df = df.copy()
@@ -88,6 +93,7 @@ df_yanis_norm = normalize_yanis(df_yanis)
 df_qualifire_norm = normalize_qualifire(df_qualifire)
 
 # Unificación
+# Concatenated DataFrames
 
 df = pd.concat([df_deepset_norm, df_xtram_norm, df_yanis_norm, df_qualifire_norm], ignore_index=True)
 
@@ -95,6 +101,9 @@ df = pd.concat([df_deepset_norm, df_xtram_norm, df_yanis_norm, df_qualifire_norm
 
 print("Eliminando duplicados...")
 # Eliminar todas las ocurrencias duplicadas, dejando solo una por prompt
+# Search for duplicate prompts and eliminates
+# Sample() select aleatorily one of the duplicates balancing the dataset
+# Random_state set to ensure reproducibility
 df = df.drop_duplicates(subset=["prompt"], keep="first")
 
 print("Balanceando clases solo con ejemplos únicos...")
@@ -106,6 +115,7 @@ df_balanced = pd.concat([
 ])
 
 # 4️⃣ Exportar dataset final
+
 print(f"Guardando dataset final en {FINAL_PATH}")
 df_balanced.to_csv(FINAL_PATH, index=False)
 print("¡Listo!")

@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
+from typing import Optional
 @dataclass
 class Detection:
     """Representa un hallazgo individual de vulnerabilidad"""
@@ -10,3 +11,4 @@ class Detection:
     description: str
     evidence: str
     recommendations: List[str]
+    detector: Optional[object] = None
