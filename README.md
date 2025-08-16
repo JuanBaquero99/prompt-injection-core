@@ -216,13 +216,17 @@ Referencias clave:
 
 ---
 
-## Feedback y Contribuciones
 
-Este es un proyecto experimental. ¡Tu feedback y contribución son bienvenidos!
+## Créditos y agradecimientos
 
-- [Reportar Issues](https://github.com/JuanBaquero99/prompt-injection-core/issues)
-- [Sugerir Features](https://github.com/JuanBaquero99/prompt-injection-core/discussions)
-- [Contribuir](https://github.com/JuanBaquero99/prompt-injection-core/pulls)
+Este proyecto utiliza datasets públicos y recursos de las siguientes fuentes:
+
+- [MITRE ATLAS](https://atlas.mitre.org/) — Ejemplos de ataques y prompts maliciosos.
+- [OWASP GenAI Security Project](https://owasp.org/www-project-generative-ai-security/) — Prompts de seguridad y manipulación.
+- [Hugging Face Datasets](https://huggingface.co/datasets) — Datasets de prompts y ataques.
+- [arXiv](https://arxiv.org/) — Casos reales y ejemplos de investigación.
+
+Agradecemos a los autores y comunidades que comparten estos recursos para investigación y desarrollo seguro en IA.
 
 ---
 
