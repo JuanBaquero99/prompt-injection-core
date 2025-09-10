@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "prompt-injection-core"
-version = "0.1.0"
-description = "Librería básica para detectar vulnerabilidades de prompt injection en LLMs"
+name = "persona-ai-security"
+version = "2.0.0"
+description = "PERSONA - Comprehensive AI Security Toolkit Monorepo - 5 phases covering complete AI model lifecycle security"
 authors = [{name = "Juan Pablo Baquero", email = "baquerojuan99@gmail.com"}]
 readme = "README.md"
 license = {text = "MIT"}
@@ -40,7 +40,7 @@ dev = [
 ]
 
 [project.scripts]
-prompt-injection-scan = "prompt_injection_core.cli:main"
+prompt-injection-scan = "phase1_input_security.prompt_injection.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/JuanBaquero99/prompt-injection-core"
@@ -49,7 +49,7 @@ Documentation = "https://github.com/JuanBaquero99/prompt-injection-core#readme"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["prompt_injection_core*"]
+include = ["src*", "phase1_input_security*", "phase2_data_security*", "phase3_extraction*", "phase4_infrastructure*", "phase5_ethics*"]
 
 [tool.black]
 line-length = 88
