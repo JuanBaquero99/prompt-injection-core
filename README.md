@@ -181,7 +181,7 @@ Este proyecto representa investigación original en:
 
 **Juan Pablo Baquero**  
 📧 baquerojuan99@gmail.com  
-🔗 LinkedIn: [Tu perfil]  
+🔗 LinkedIn: www.linkedin.com/in/juan-pablo-baquero-dávila 
 🐙 GitHub: [@JuanBaquero99](https://github.com/JuanBaquero99)
 
 ---
