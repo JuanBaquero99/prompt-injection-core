@@ -7,8 +7,8 @@ __author__ = "Juan Pablo Baquero"
 __email__ = "baquerojuan99@gmail.com"
 
 # Import main classes
-from .scanner.scanner import PromptScanner, ScanResult
-from .detectors import Detection, Detector, JailbreakDetector, SystemLeakDetector
+from .core import PromptScanner, ScanResult
+from .detectors import Detection, Detector, JailbreakDetector
 
 __all__ = [
     "PromptScanner",      # Main scanner class
@@ -16,6 +16,5 @@ __all__ = [
     "Detection",          # Individual detection result
     "Detector",           # Base detector class
     "JailbreakDetector",  # Jailbreak detection
-    "SystemLeakDetector", # System prompt leak detection
 ]
 

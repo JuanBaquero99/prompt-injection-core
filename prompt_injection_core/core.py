@@ -22,73 +22,47 @@ class MLDetectorAdapter(Detector):
     def detect(self, prompt: str) -> List[Detection]:
         result = self.model.predict(prompt)
         detections = []
-        if result['prediction'] == 'malicious':
-            prob = result['prob_malicious']
-            severity = None
-            if prob >= 0.9:
+        
+        # Usar prediction_by_threshold en lugar de prediction estándar
+        prob_malicious = result['prob_malicious']
+        
+        # Ajustar umbrales para mejor balance precision/recall
+        if prob_malicious >= 0.60:  # Umbral ajustado para reducir falsos positivos
+            if prob_malicious >= 0.80:
                 severity = "HIGH"
-            elif prob >= 0.8:
+            elif prob_malicious >= 0.70:
                 severity = "MEDIUM"
-            # Solo se genera detección si la probabilidad es >= 0.8
-            if severity:
-                detections.append(Detection(
-                    vulnerability_type="ML Prompt Injection",
-                    confidence=prob,
-                    severity=severity,
-                    description="ML model detected possible prompt injection",
-                    evidence=prompt,
-                    recommendations=["Revisar el prompt", "Aplicar filtros adicionales"],
-                    detector=self.name
-                ))
-        return detections  # Eliminado return fuera de función
-    def scan(self, prompt: str) -> ScanResult:
-        """Scan the prompt for vulnerabilities using all detectors"""
-        all_detections = []
-        for detector in self.detectors:
-            try:
-                detections = detector.detect(prompt)
-                all_detections.extend(detections)
-            except Exception as e:
-                print(f"Error in detector {detector.name}: {e}")
+            else:
+                severity = "LOW"
+                
+            detections.append(Detection(
+                vulnerability_type="ML Prompt Injection",
+                confidence=prob_malicious,
+                severity=severity,
+                description=f"ML model detected possible prompt injection (confidence: {prob_malicious:.1%})",
+                evidence=prompt[:100] + "..." if len(prompt) > 100 else prompt,
+                recommendations=["Revisar el prompt", "Aplicar filtros adicionales"],
+                detector=self.name
+            ))
+        return detections
 
-        # Calculate metrics
-        risk_score = self._calculate_risk_score(all_detections)
-        summary = self._generate_summary(all_detections, risk_score)
-
-        return ScanResult(
-            prompt=prompt[:100] + "..." if len(prompt) > 100 else prompt,
-            detections=all_detections,
-            risk_score=risk_score,
-            vulnerabilities_found=len(all_detections),
-            summary=summary
-        )
-    
-    def _calculate_risk_score(self, detections: List[Detection]) -> int:
-        """Calculate risk score from 0-100 based on detections"""
-        if not detections:
-            return 0
-
-        total_score = sum(
-            50 if d.severity == "HIGH" else
-            30 if d.severity == "MEDIUM" else
-            10 for d in detections
-        )
-        return min(100, total_score)
-    
-    def _generate_summary(self, detections: List[Detection], risk_score: int) -> str:
-        """Generate a summary of the scan results"""
-        if not detections:
-            return "No vulnerabilities detected. Prompt appears safe."
-
-        severity_counts = {}
-
-# Clase PromptScanner movida al nivel superior
 class PromptScanner:
     """Main scanner class for detecting prompt injection vulnerabilities"""
-    def __init__(self, use_ml=False):
+    def __init__(self, use_ml=False, use_experimental=False):
         self.detectors: List[Detector] = [JailbreakDetector()]
         if use_ml:
-            self.detectors.append(MLDetectorAdapter())  # Add ML-based detector
+            self.detectors.append(MLDetectorAdapter())
+        if use_experimental:
+            # Importar detector experimental solo cuando se necesite
+            try:
+                import sys
+                import os
+                project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                sys.path.insert(0, project_root)
+                from research.adversarial.educational_disguise import EducationalDisguiseDetector
+                self.detectors.append(EducationalDisguiseDetector())
+            except ImportError as e:
+                print(f"Warning: Could not load experimental detectors: {e}")
 
     def scan(self, prompt: str) -> ScanResult:
         """Scan the prompt for vulnerabilities using all detectors"""
@@ -120,6 +94,7 @@ class PromptScanner:
         total_score = sum(
             50 if d.severity == "HIGH" else
             30 if d.severity == "MEDIUM" else
+            15 if d.severity == "LOW" else
             10 for d in detections
         )
         return min(100, total_score)
