@@ -1,0 +1,88 @@
+{
+  "comparison_metadata": {
+    "timestamp": "2025-09-10T18:32:30.859245",
+    "framework_version": "1.0.0",
+    "research_basis": [
+      "Chen et al. IEEE 2020 - Pipeline Positioning Attacks",
+      "Zhang et al. 2021 - Adversarial OCR Vulnerabilities"
+    ]
+  },
+  "attack_type_comparison": {
+    "ocr_injection": {
+      "total_attacks": 20,
+      "techniques_count": 4,
+      "avg_complexity": 0.525,
+      "avg_stealth": 0.812,
+      "techniques": [
+        "invisible_text",
+        "transparent_overlay",
+        "steganographic",
+        "microscopic_text"
+      ]
+    },
+    "pipeline_positioning": {
+      "total_attacks": 20,
+      "techniques_count": 4,
+      "avg_complexity": 0.825,
+      "avg_sophistication": 0.875,
+      "techniques": [
+        "preprocessing_injection",
+        "feature_extraction_manipulation",
+        "attention_hijacking",
+        "multi_stage_coordinated"
+      ],
+      "pipeline_stages_targeted": [
+        "preprocessing",
+        "feature_extraction",
+        "attention_mechanism",
+        "ocr_processing"
+      ]
+    }
+  },
+  "effectiveness_analysis": {
+    "complexity_advantage": "pipeline",
+    "sophistication_leader": "pipeline_positioning",
+    "stealth_comparison": {
+      "ocr_stealth": 0.812,
+      "pipeline_theoretical_stealth": 0.88
+    },
+    "research_insights": {
+      "pipeline_advantages": [
+        "Targeting specific processing stages",
+        "Exploitation of architectural vulnerabilities",
+        "Multi-stage coordination capabilities",
+        "Attention mechanism manipulation"
+      ],
+      "ocr_advantages": [
+        "Simpler implementation",
+        "Lower computational requirements",
+        "Well-established techniques",
+        "Higher stealth in some scenarios"
+      ]
+    }
+  },
+  "performance_metrics": {
+    "execution_time_comparison": {
+      "avg_ocr_time": 0.0293,
+      "avg_pipeline_time": 0.4273
+    },
+    "scalability_assessment": {
+      "ocr_scalability": "High - Simple operations",
+      "pipeline_scalability": "Medium - Complex computations"
+    }
+  },
+  "recommendations": {
+    "use_ocr_when": [
+      "Quick deployment needed",
+      "Limited computational resources",
+      "Simple bypass requirements",
+      "High stealth priority"
+    ],
+    "use_pipeline_when": [
+      "Sophisticated model targets",
+      "Multi-modal systems",
+      "Advanced defense mechanisms present",
+      "Research or testing purposes"
+    ]
+  }
+}

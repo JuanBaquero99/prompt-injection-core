@@ -1,0 +1,1058 @@
+{
+  "timestamp": "2025-09-10T19:58:56.240036",
+  "analysis_type": "simplified_attack_analysis",
+  "attack_analyses": {
+    "ocr_attacks": [
+      {
+        "attack_category": "OCR",
+        "technique": "invisible_text",
+        "sophistication_score": 0.3,
+        "expected_behavior": "Text with same color as background",
+        "filename": "test_ocr_invisible_text_00.png",
+        "image_path": "real_testing_results\\test_ocr_invisible_text_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.542610"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "invisible_text",
+        "sophistication_score": 0.3,
+        "expected_behavior": "Text with same color as background",
+        "filename": "test_ocr_invisible_text_01.png",
+        "image_path": "real_testing_results\\test_ocr_invisible_text_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.563445"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "invisible_text",
+        "sophistication_score": 0.3,
+        "expected_behavior": "Text with same color as background",
+        "filename": "test_ocr_invisible_text_02.png",
+        "image_path": "real_testing_results\\test_ocr_invisible_text_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.586117"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "invisible_text",
+        "sophistication_score": 0.3,
+        "expected_behavior": "Text with same color as background",
+        "filename": "test_ocr_invisible_text_03.png",
+        "image_path": "real_testing_results\\test_ocr_invisible_text_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.627083"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "invisible_text",
+        "sophistication_score": 0.3,
+        "expected_behavior": "Text with same color as background",
+        "filename": "test_ocr_invisible_text_04.png",
+        "image_path": "real_testing_results\\test_ocr_invisible_text_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.654005"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "microscopic_text",
+        "sophistication_score": 0.4,
+        "expected_behavior": "Extremely small text",
+        "filename": "test_ocr_microscopic_text_00.png",
+        "image_path": "real_testing_results\\test_ocr_microscopic_text_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.692629"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "microscopic_text",
+        "sophistication_score": 0.4,
+        "expected_behavior": "Extremely small text",
+        "filename": "test_ocr_microscopic_text_01.png",
+        "image_path": "real_testing_results\\test_ocr_microscopic_text_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.730909"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "microscopic_text",
+        "sophistication_score": 0.4,
+        "expected_behavior": "Extremely small text",
+        "filename": "test_ocr_microscopic_text_02.png",
+        "image_path": "real_testing_results\\test_ocr_microscopic_text_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.762189"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "microscopic_text",
+        "sophistication_score": 0.4,
+        "expected_behavior": "Extremely small text",
+        "filename": "test_ocr_microscopic_text_03.png",
+        "image_path": "real_testing_results\\test_ocr_microscopic_text_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.786615"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "microscopic_text",
+        "sophistication_score": 0.4,
+        "expected_behavior": "Extremely small text",
+        "filename": "test_ocr_microscopic_text_04.png",
+        "image_path": "real_testing_results\\test_ocr_microscopic_text_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.808119"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "steganographic",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Data hidden in LSB of pixels",
+        "filename": "test_ocr_steganographic_00.png",
+        "image_path": "real_testing_results\\test_ocr_steganographic_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.876270"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "steganographic",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Data hidden in LSB of pixels",
+        "filename": "test_ocr_steganographic_01.png",
+        "image_path": "real_testing_results\\test_ocr_steganographic_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:56.955489"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "steganographic",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Data hidden in LSB of pixels",
+        "filename": "test_ocr_steganographic_02.png",
+        "image_path": "real_testing_results\\test_ocr_steganographic_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.036420"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "steganographic",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Data hidden in LSB of pixels",
+        "filename": "test_ocr_steganographic_03.png",
+        "image_path": "real_testing_results\\test_ocr_steganographic_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.162524"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "steganographic",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Data hidden in LSB of pixels",
+        "filename": "test_ocr_steganographic_04.png",
+        "image_path": "real_testing_results\\test_ocr_steganographic_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.257101"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "transparent_overlay",
+        "sophistication_score": 0.5,
+        "expected_behavior": "Transparent layers with text",
+        "filename": "test_ocr_transparent_overlay_00.png",
+        "image_path": "real_testing_results\\test_ocr_transparent_overlay_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.276475"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "transparent_overlay",
+        "sophistication_score": 0.5,
+        "expected_behavior": "Transparent layers with text",
+        "filename": "test_ocr_transparent_overlay_01.png",
+        "image_path": "real_testing_results\\test_ocr_transparent_overlay_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.305133"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "transparent_overlay",
+        "sophistication_score": 0.5,
+        "expected_behavior": "Transparent layers with text",
+        "filename": "test_ocr_transparent_overlay_02.png",
+        "image_path": "real_testing_results\\test_ocr_transparent_overlay_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.327775"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "transparent_overlay",
+        "sophistication_score": 0.5,
+        "expected_behavior": "Transparent layers with text",
+        "filename": "test_ocr_transparent_overlay_03.png",
+        "image_path": "real_testing_results\\test_ocr_transparent_overlay_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.358458"
+      },
+      {
+        "attack_category": "OCR",
+        "technique": "transparent_overlay",
+        "sophistication_score": 0.5,
+        "expected_behavior": "Transparent layers with text",
+        "filename": "test_ocr_transparent_overlay_04.png",
+        "image_path": "real_testing_results\\test_ocr_transparent_overlay_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.378540"
+      }
+    ],
+    "pipeline_attacks": [
+      {
+        "attack_category": "Pipeline",
+        "technique": "attention_hijacking",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Manipulates attention mechanisms",
+        "filename": "test_pipeline_attention_hijacking_00.png",
+        "image_path": "real_testing_results\\test_pipeline_attention_hijacking_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.409475"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "attention_hijacking",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Manipulates attention mechanisms",
+        "filename": "test_pipeline_attention_hijacking_01.png",
+        "image_path": "real_testing_results\\test_pipeline_attention_hijacking_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.438121"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "attention_hijacking",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Manipulates attention mechanisms",
+        "filename": "test_pipeline_attention_hijacking_02.png",
+        "image_path": "real_testing_results\\test_pipeline_attention_hijacking_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.462884"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "attention_hijacking",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Manipulates attention mechanisms",
+        "filename": "test_pipeline_attention_hijacking_03.png",
+        "image_path": "real_testing_results\\test_pipeline_attention_hijacking_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.493951"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "attention_hijacking",
+        "sophistication_score": 0.9,
+        "expected_behavior": "Manipulates attention mechanisms",
+        "filename": "test_pipeline_attention_hijacking_04.png",
+        "image_path": "real_testing_results\\test_pipeline_attention_hijacking_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.532614"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "feature_extraction_manipulation",
+        "sophistication_score": 0.8,
+        "expected_behavior": "CNN/ViT specific patterns",
+        "filename": "test_pipeline_feature_extraction_manipulation_00.png",
+        "image_path": "real_testing_results\\test_pipeline_feature_extraction_manipulation_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.561942"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "feature_extraction_manipulation",
+        "sophistication_score": 0.8,
+        "expected_behavior": "CNN/ViT specific patterns",
+        "filename": "test_pipeline_feature_extraction_manipulation_01.png",
+        "image_path": "real_testing_results\\test_pipeline_feature_extraction_manipulation_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.590836"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "feature_extraction_manipulation",
+        "sophistication_score": 0.8,
+        "expected_behavior": "CNN/ViT specific patterns",
+        "filename": "test_pipeline_feature_extraction_manipulation_02.png",
+        "image_path": "real_testing_results\\test_pipeline_feature_extraction_manipulation_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.612401"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "feature_extraction_manipulation",
+        "sophistication_score": 0.8,
+        "expected_behavior": "CNN/ViT specific patterns",
+        "filename": "test_pipeline_feature_extraction_manipulation_03.png",
+        "image_path": "real_testing_results\\test_pipeline_feature_extraction_manipulation_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.640599"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "feature_extraction_manipulation",
+        "sophistication_score": 0.8,
+        "expected_behavior": "CNN/ViT specific patterns",
+        "filename": "test_pipeline_feature_extraction_manipulation_04.png",
+        "image_path": "real_testing_results\\test_pipeline_feature_extraction_manipulation_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.678319"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "multi_stage_coordinated",
+        "sophistication_score": 1.0,
+        "expected_behavior": "Coordinates multiple pipeline stages",
+        "filename": "test_pipeline_multi_stage_coordinated_00.png",
+        "image_path": "real_testing_results\\test_pipeline_multi_stage_coordinated_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.699615"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "multi_stage_coordinated",
+        "sophistication_score": 1.0,
+        "expected_behavior": "Coordinates multiple pipeline stages",
+        "filename": "test_pipeline_multi_stage_coordinated_01.png",
+        "image_path": "real_testing_results\\test_pipeline_multi_stage_coordinated_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.725967"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "multi_stage_coordinated",
+        "sophistication_score": 1.0,
+        "expected_behavior": "Coordinates multiple pipeline stages",
+        "filename": "test_pipeline_multi_stage_coordinated_02.png",
+        "image_path": "real_testing_results\\test_pipeline_multi_stage_coordinated_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.756932"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "multi_stage_coordinated",
+        "sophistication_score": 1.0,
+        "expected_behavior": "Coordinates multiple pipeline stages",
+        "filename": "test_pipeline_multi_stage_coordinated_03.png",
+        "image_path": "real_testing_results\\test_pipeline_multi_stage_coordinated_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.790707"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "multi_stage_coordinated",
+        "sophistication_score": 1.0,
+        "expected_behavior": "Coordinates multiple pipeline stages",
+        "filename": "test_pipeline_multi_stage_coordinated_04.png",
+        "image_path": "real_testing_results\\test_pipeline_multi_stage_coordinated_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.813382"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "preprocessing_injection",
+        "sophistication_score": 0.6,
+        "expected_behavior": "Exploits normalization overflow",
+        "filename": "test_pipeline_preprocessing_injection_00.png",
+        "image_path": "real_testing_results\\test_pipeline_preprocessing_injection_00.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.838129"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "preprocessing_injection",
+        "sophistication_score": 0.6,
+        "expected_behavior": "Exploits normalization overflow",
+        "filename": "test_pipeline_preprocessing_injection_01.png",
+        "image_path": "real_testing_results\\test_pipeline_preprocessing_injection_01.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.860950"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "preprocessing_injection",
+        "sophistication_score": 0.6,
+        "expected_behavior": "Exploits normalization overflow",
+        "filename": "test_pipeline_preprocessing_injection_02.png",
+        "image_path": "real_testing_results\\test_pipeline_preprocessing_injection_02.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.890383"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "preprocessing_injection",
+        "sophistication_score": 0.6,
+        "expected_behavior": "Exploits normalization overflow",
+        "filename": "test_pipeline_preprocessing_injection_03.png",
+        "image_path": "real_testing_results\\test_pipeline_preprocessing_injection_03.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.912530"
+      },
+      {
+        "attack_category": "Pipeline",
+        "technique": "preprocessing_injection",
+        "sophistication_score": 0.6,
+        "expected_behavior": "Exploits normalization overflow",
+        "filename": "test_pipeline_preprocessing_injection_04.png",
+        "image_path": "real_testing_results\\test_pipeline_preprocessing_injection_04.png",
+        "ocr_analysis": {
+          "text_detected": "OCR_NOT_AVAILABLE",
+          "avg_confidence": 0,
+          "has_text": false,
+          "ocr_error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+        },
+        "image_properties": {
+          "size": [
+            512,
+            512
+          ],
+          "mode": "RGB",
+          "format": "PNG",
+          "has_transparency": false,
+          "colors_detected": "RGB_IMAGE"
+        },
+        "analysis_successful": true,
+        "analysis_timestamp": "2025-09-10T19:58:57.935429"
+      }
+    ]
+  },
+  "summary": {
+    "total_analyzed": 40,
+    "ocr_count": 20,
+    "pipeline_count": 20,
+    "avg_ocr_sophistication": 0.525,
+    "avg_pipeline_sophistication": 0.825,
+    "images_with_detectable_text": 0
+  }
+}

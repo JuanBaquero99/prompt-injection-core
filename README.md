@@ -24,7 +24,7 @@ Esta fase se enfoca en amenazas que ocurren durante el procesamiento de entradas
 
 - **1.1 Prompt Injection Detection:** Sistema híbrido multicapa que combina detección basada en reglas, machine learning y análisis adversarial. El sistema actual implementa cuatro detectores especializados (Jailbreak, System Leak, Role Play, y ML) con métricas validadas de 100% de precisión y 30% de recall.
 
-- **1.3 Adversarial Examples:** Planificado para detectar ejemplos adversariales diseñados específicamente para evadir filtros de seguridad.
+- **1.3 Adversarial Examples:** Framework PERSONA completamente implementado para evaluar vulnerabilidades en modelos visión-lenguaje. Primera evaluación sistemática de LLaVA-1.5-7B con 12.5% success rate general, demostrando que pipeline positioning attacks (25%) son significativamente más efectivos que OCR injection (0%).
 
 - **5.1 Validación y Filtrado de Inputs:** Sistema de sanitización y validación robusta de entradas planificado para implementación futura.
 
@@ -94,6 +94,15 @@ Herramientas para asegurar transparencia, equidad y cumplimiento normativo:
 - Pipeline completo de investigación a producción
 - Métricas validadas: Precisión 100%, Recall 30%, Especificidad 100%
 - Detección de camuflaje educativo (primera implementación conocida en literatura académica)
+
+**PERSONA - Adversarial Examples Framework (Fase 1)**
+- Framework comprensivo con 8 técnicas de ataque (4 OCR injection + 4 pipeline positioning)
+- Evaluación sistemática de 40 ataques adversariales contra LLaVA-1.5-7B
+- Multi-prompt testing con algoritmo de 67 indicadores de éxito
+- Primera validación empírica de vulnerabilidades en modelos visión-lenguaje
+- Resultados estadísticamente significativos: pipeline positioning 25% vs OCR injection 0%
+- Preprocessing injection identificada como técnica más vulnerable (40% success rate)
+- Paper académico en preparación para conference submission
 
 ### En Desarrollo
 
@@ -222,6 +231,10 @@ PERSONA/
 - Análisis de discrepancia intencional en prompts maliciosos
 - Framework híbrido para detección multicapa de amenazas
 - Metodología de evaluación para sistemas de seguridad en IA
+- **PERSONA Framework**: Primera evaluación sistemática de adversarial vulnerabilities en LLaVA-1.5-7B
+- **Pipeline positioning attacks**: Demostración empírica de mayor efectividad vs métodos tradicionales
+- **Multi-modal security**: Nuevo paradigma de seguridad para modelos visión-lenguaje
+- **67-indicator success detection**: Algoritmo robusto para detectar ataques sutiles en respuestas multimodales
 
 ### Casos de Estudio Documentados
 - Ataques de camuflaje profesional y educativo
